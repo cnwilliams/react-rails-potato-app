@@ -10,6 +10,9 @@ class Api::PotatosController < ApplicationController
   # GET /api/potatos/1
   # GET /api/potatos/1.json
   def show
+    if request.xhr?
+      render json:  @api_potato
+    end
   end
 
   # GET /api/potatos/new

@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   namespace :api do
     resources :potatos
   end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "potatos/:id", to: "api/potatos#show"
 end
