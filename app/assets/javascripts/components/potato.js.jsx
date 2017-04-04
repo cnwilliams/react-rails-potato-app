@@ -7,7 +7,7 @@ var Potato = React.createClass({
 
   render: function() {
     return (
-      <div class="potato">
+      <div className="potato">
         <h4>{this.props.name} ({this.props.variety})</h4>
         <img src={this.props.image} />
       </div>

@@ -1,11 +1,8 @@
 var Potatos = React.createClass({
-  // propTypes: {
-  //   potatos: React.PropTypes.array
-  // },
   render: function() {
-    let potatos = this.props.map(function(potato){
+    let potatos = this.props.potatos.map(function(potato){
       return (
-        <Potato key={potato.id} potato={potato}/>
+        <Potato name={potato.name} variety={potato.variety} image={potato.image}/>
       )
     })
     return(
