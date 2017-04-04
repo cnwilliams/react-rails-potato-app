@@ -5,6 +5,10 @@ class Api::PotatosController < ApplicationController
   # GET /api/potatos.json
   def index
     @api_potatos = Api::Potato.all
+
+    if request.xhr?
+      render json:  @api_potatos
+    end
   end
 
   # GET /api/potatos/1
