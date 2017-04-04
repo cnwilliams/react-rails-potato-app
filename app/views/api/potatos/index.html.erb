@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Api Potatos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Variety</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @api_potatos.each do |api_potato| %>
+      <tr>
+        <td><%= api_potato.name %></td>
+        <td><%= api_potato.variety %></td>
+        <td><%= api_potato.image %></td>
+        <td><%= link_to 'Show', api_potato %></td>
+        <td><%= link_to 'Edit', edit_api_potato_path(api_potato) %></td>
+        <td><%= link_to 'Destroy', api_potato, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Api Potato', new_api_potato_path %>
