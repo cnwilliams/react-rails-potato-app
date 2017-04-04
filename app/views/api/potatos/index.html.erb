@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<%= react_component('Potatos', @api_potatos) %>
+<%= react_component('Potatos', {potatos: @api_potatos}) %>
 
 <%= link_to 'New Api Potato', new_api_potato_path %>
